@@ -173,6 +173,62 @@ GITHUB_TOKEN=ghp_xxxxx
 ANTHROPIC_API_KEY=sk-ant-xxxxx
 ```
 
+## X運用ナレッジベースシステム
+
+### 概要
+
+X投稿のネタ生成・品質向上を支援するナレッジベースシステムです。
+
+### 主要コマンド
+
+| コマンド | 説明 |
+|---------|------|
+| `/x-knowledge-add` | ナレッジを追加（PDF/Excel/CSV/Markdown対応） |
+| `/x-knowledge-search` | セマンティック検索でナレッジを検索 |
+| `/x-generate-post` | ナレッジを元にX投稿案を生成 |
+
+### ディレクトリ構造
+
+```
+knowledge/
+├── raw/          # オリジナル資料
+├── processed/    # 処理済みデータ（チャンク・埋め込み）
+├── templates/    # 投稿テンプレート
+├── categories/   # カテゴリ別整理
+└── index.json    # メタデータインデックス
+```
+
+### カテゴリ
+
+- `marketing` - マーケティング
+- `engagement` - エンゲージメント
+- `content-strategy` - コンテンツ戦略
+- `analytics` - 分析・KPI
+- `case-studies` - 成功事例
+- `trends` - トレンド
+- `best-practices` - ベストプラクティス
+- `tools` - ツール
+
+### MCP統合
+
+`x-knowledge` MCPサーバーが以下のツールを提供:
+
+- `x_knowledge__add` - ナレッジ追加
+- `x_knowledge__search` - 検索実行
+- `x_knowledge__list` - 一覧取得
+- `x_knowledge__get` - 詳細取得
+- `x_knowledge__delete` - 削除
+- `x_knowledge__generate_post` - 投稿生成
+- `x_knowledge__sync` - インデックス同期
+- `x_knowledge__stats` - 統計取得
+
+### 環境変数（追加）
+
+```bash
+# OpenAI API Key（セマンティック検索・埋め込み生成に必要）
+OPENAI_API_KEY=sk-...
+```
+
 ## サポート
 
 - **Framework**: [Miyabi](https://github.com/ShunsukeHayashi/Autonomous-Operations)

@@ -137,3 +137,21 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Knowledge Base
+knowledge/raw/*
+!knowledge/raw/.gitkeep
+!knowledge/raw/pdf/.gitkeep
+!knowledge/raw/excel/.gitkeep
+!knowledge/raw/docs/.gitkeep
+knowledge/processed/embeddings/*
+!knowledge/processed/embeddings/.gitkeep
+knowledge/processed/chunks/*
+!knowledge/processed/chunks/.gitkeep
+knowledge/history/generated-posts/*
+!knowledge/history/generated-posts/.gitkeep
+
+# Sensitive knowledge files
+knowledge/**/*.env
+knowledge/**/*secret*
+knowledge/**/*credential*

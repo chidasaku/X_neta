@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "",
+  "totalItems": 0,
+  "items": [],
+  "config": {
+    "embedding": {
+      "provider": "openai",
+      "model": "text-embedding-3-small",
+      "dimension": 1536
+    },
+    "chunking": {
+      "strategy": "recursive",
+      "maxChunkSize": 500,
+      "overlap": 50
+    },
+    "search": {
+      "defaultLimit": 5,
+      "minSimilarity": 0.7
+    }
+  },
+  "categories": [
+    "marketing",
+    "engagement",
+    "content-strategy",
+    "analytics",
+    "case-studies",
+    "trends",
+    "best-practices",
+    "tools",
+    "other"
+  ]
+}
